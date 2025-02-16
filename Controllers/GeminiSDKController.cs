@@ -33,7 +33,8 @@ namespace geminisdktest.Controllers
             try
             {
                 var result = await geminiClient.GenerateContentAsync(model, request.Prompt);
-                return Ok(new { Response = result });
+                return Ok(result);
+
             }
             catch (GeminiApiException ex)
             {

@@ -17,6 +17,13 @@
         public long Runs { get; set; }
         public int Hundreds { get; set; }
         public int Fifties { get; set; }
+        public int Wickets { get; set; }
+        public string BowlingAverage { get; set; }
+        public string BowlingType {  get; set; }
+        public string BallsBowled {  get; set; }
+        public int FiveWicketHauls { get; set; }
+        public string BestBowling { get; set; }
+        public string BowlingArm { get; set;  }
     }
 
 }
