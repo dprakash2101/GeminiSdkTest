@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "98d75023-2058-42ca-b477-e8585be6e6b5",
+		"name": "Gemini SDK Test Prompts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32085196"
+	},
+	"item": [
+		{
+			"name": "Structured Request 1",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Structured request2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "GeminiApiKey",
+						"value": "Enter_Your_api_KEY"
+					},
+					{
+						"key": "Gemini-Model",
+						"value": "gemini-2.0-flash"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"prompt\": \"Starship is a two-stage fully reusable super heavy-lift launch vehicle under development by American aerospace company SpaceX. On 20 April 2023, with the first Integrated Flight Test, Starship became the most massive and most powerful vehicle ever to fly.[10] SpaceX has developed Starship with the intention of lowering launch costs using economies of scale,[11] aiming to achieve this by reusing both rocket stages by catching them with the launch tower's systems, increasing payload mass to orbit, increasing launch frequency, mass-manufacturing the rockets and adapting it to a wide range of space missions.[12][13] Starship is the latest project in SpaceX's reusable launch system development program and plan to colonize Mars.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7236/api/GeminiSDKStructured/generate-rocketstats",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7236",
+					"path": [
+						"api",
+						"GeminiSDKStructured",
+						"generate-rocketstats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Structured Request 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "GeminiApiKey",
+						"value": "API_KEY"
+					},
+					{
+						"key": "Gemini-Model",
+						"value": "gemini-2.0-flash"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"prompt\": \"Please give all the stats of virat kohli\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7236/api/GeminiSDKStructured/generate-structured",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7236",
+					"path": [
+						"api",
+						"GeminiSDKStructured",
+						"generate-structured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Structured Request 4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "GeminiApiKey",
+						"value": "API_KEY"
+					},
+					{
+						"key": "Gemini-Model",
+						"value": "gemini-2.0-flash"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"prompt\": \"Please give all the stats of Brett Lee\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7236/api/GeminiSDKStructured/generate-structured",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7236",
+					"path": [
+						"api",
+						"GeminiSDKStructured",
+						"generate-structured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Text Generation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "GeminiApiKey",
+						"value": "API_Key"
+					},
+					{
+						"key": "Gemini-Model",
+						"value": "gemini-2.0-flash"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"prompt\": \"Write about Sieve Caching Algorithm\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7236/api/GeminiSDK/generate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7236",
+					"path": [
+						"api",
+						"GeminiSDK",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
