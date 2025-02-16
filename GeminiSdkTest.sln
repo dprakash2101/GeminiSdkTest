@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeminiSdkTest", "GeminiSdkTest.csproj", "{080A2745-C45F-4F14-A345-D813EEA294A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{080A2745-C45F-4F14-A345-D813EEA294A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{080A2745-C45F-4F14-A345-D813EEA294A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{080A2745-C45F-4F14-A345-D813EEA294A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{080A2745-C45F-4F14-A345-D813EEA294A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
