@@ -1,7 +1,20 @@
+using Serilog;
+using Serilog.Extensions.Hosting;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Configure Serilog globally
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug() // Capture Debug, Information, Warning, Error
+    .WriteTo.Debug() // Send logs to Visual Studio Output Window
+    .WriteTo.Console() // Optional: Keep console logs
+    .WriteTo.File("logs/app.log", rollingInterval: RollingInterval.Day) // Optional: Keep file logs
+    .CreateLogger();
 
+// Replace default logging with Serilog
+builder.Services.AddSerilog(); // Registers Serilog as the logging provider
+
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -22,4 +35,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+try
+{
+    app.Run();
+}
+finally
+{
+    // Flush logs on shutdown
+    Log.CloseAndFlush();
+}
